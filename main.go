@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	binaryearch "github.com/mars1385/leetcode/binary_earch"
+	slidingwindow "github.com/mars1385/leetcode/sliding_window"
 )
 
 func main() {
 
-	fmt.Println(binaryearch.Search([]int{-1, 0, 3, 5, 9, 12}, 12))
+	fmt.Println(slidingwindow.MaxProfit([]int{4, 11, 2, 1, 7}))
 }
