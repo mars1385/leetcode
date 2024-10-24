@@ -3,10 +3,10 @@ package main
 import (
 	"fmt"
 
-	"github.com/mars1385/leetcode/stack"
+	binaryearch "github.com/mars1385/leetcode/binary_earch"
 )
 
 func main() {
 
-	fmt.Println(stack.IsValid("([)]"))
+	fmt.Println(binaryearch.Search([]int{-1, 0, 3, 5, 9, 12}, 12))
 }
