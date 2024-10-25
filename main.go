@@ -3,10 +3,29 @@ package main
 import (
 	"fmt"
 
-	slidingwindow "github.com/mars1385/leetcode/sliding_window"
+	linkedlist "github.com/mars1385/leetcode/linked_list"
 )
 
 func main() {
 
-	fmt.Println(slidingwindow.MaxProfit([]int{4, 11, 2, 1, 7}))
+	h := linkedlist.LinkedList{}
+
+	// for i := 1; i < 6; i++ {
+	// 	newNode := &linkedlist.ListNode{
+	// 		Val: i,
+	// 	}
+
+	// 	if h.Head == nil {
+	// 		h.Head = newNode
+	// 	} else {
+
+	// 		current := h.Head
+	// 		for current.Next != nil {
+	// 			current = current.Next
+	// 		}
+	// 		current.Next = newNode
+	// 	}
+	// }
+	fmt.Println(linkedlist.ReverseList(h.Head))
+
 }
