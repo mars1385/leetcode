@@ -9,8 +9,9 @@ import (
 func main() {
 
 	h := linkedlist.LinkedList{}
+	h2 := linkedlist.LinkedList{}
 
-	// for i := 1; i < 6; i++ {
+	// for i := 1; i < 3; i++ {
 	// 	newNode := &linkedlist.ListNode{
 	// 		Val: i,
 	// 	}
@@ -26,6 +27,28 @@ func main() {
 	// 		current.Next = newNode
 	// 	}
 	// }
-	fmt.Println(linkedlist.ReverseList(h.Head))
+
+	// for i := 1; i < 3; i++ {
+	// 	newNode := &linkedlist.ListNode{
+	// 		Val: i,
+	// 	}
+
+	// 	if h2.Head == nil {
+	// 		h2.Head = newNode
+	// 	} else {
+
+	// 		current := h2.Head
+	// 		for current.Next != nil {
+	// 			current = current.Next
+	// 		}
+	// 		current.Next = newNode
+	// 	}
+	// }
+	d := linkedlist.MergeTwoLists(h.Head, h2.Head)
+	for d != nil {
+
+		fmt.Println(d.Val)
+		d = d.Next
+	}
 
 }
