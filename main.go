@@ -9,24 +9,37 @@ import (
 func main() {
 
 	h := linkedlist.LinkedList{}
-	h2 := linkedlist.LinkedList{}
+	v := []int{3, 2, 0, -4}
 
-	// for i := 1; i < 3; i++ {
-	// 	newNode := &linkedlist.ListNode{
-	// 		Val: i,
-	// 	}
+	var aa *linkedlist.ListNode
+	for i := 0; i <= 3; i++ {
+		newNode := &linkedlist.ListNode{
+			Val: v[i],
+		}
 
-	// 	if h.Head == nil {
-	// 		h.Head = newNode
-	// 	} else {
+		if i == 1 {
+			aa = newNode
+		}
+		if h.Head == nil {
+			h.Head = newNode
+		} else {
 
-	// 		current := h.Head
-	// 		for current.Next != nil {
-	// 			current = current.Next
-	// 		}
-	// 		current.Next = newNode
-	// 	}
-	// }
+			current := h.Head
+			for current.Next != nil {
+				current = current.Next
+			}
+			current.Next = newNode
+		}
+
+		if i == 3 {
+
+			current := h.Head
+			for current.Next != nil {
+				current = current.Next
+			}
+			current.Next = aa
+		}
+	}
 
 	// for i := 1; i < 3; i++ {
 	// 	newNode := &linkedlist.ListNode{
@@ -44,11 +57,9 @@ func main() {
 	// 		current.Next = newNode
 	// 	}
 	// }
-	d := linkedlist.MergeTwoLists(h.Head, h2.Head)
-	for d != nil {
 
-		fmt.Println(d.Val)
-		d = d.Next
-	}
+	d := linkedlist.HasCycle(h.Head)
+
+	fmt.Println(d)
 
 }
