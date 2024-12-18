@@ -3,63 +3,20 @@ package main
 import (
 	"fmt"
 
-	linkedlist "github.com/mars1385/leetcode/linked_list"
+	"github.com/mars1385/leetcode/trie"
 )
 
 func main() {
 
-	h := linkedlist.LinkedList{}
-	v := []int{3, 2, 0, -4}
+	obj := trie.Constructor()
 
-	var aa *linkedlist.ListNode
-	for i := 0; i <= 3; i++ {
-		newNode := &linkedlist.ListNode{
-			Val: v[i],
-		}
+	obj.Insert("apple")
+	// return True
+	// obj.Search("app")     // return False
+	// obj.StartsWith("app") // return True
+	// obj.Insert("app")
+	// obj.Search("app") // return True
 
-		if i == 1 {
-			aa = newNode
-		}
-		if h.Head == nil {
-			h.Head = newNode
-		} else {
-
-			current := h.Head
-			for current.Next != nil {
-				current = current.Next
-			}
-			current.Next = newNode
-		}
-
-		if i == 3 {
-
-			current := h.Head
-			for current.Next != nil {
-				current = current.Next
-			}
-			current.Next = aa
-		}
-	}
-
-	// for i := 1; i < 3; i++ {
-	// 	newNode := &linkedlist.ListNode{
-	// 		Val: i,
-	// 	}
-
-	// 	if h2.Head == nil {
-	// 		h2.Head = newNode
-	// 	} else {
-
-	// 		current := h2.Head
-	// 		for current.Next != nil {
-	// 			current = current.Next
-	// 		}
-	// 		current.Next = newNode
-	// 	}
-	// }
-
-	d := linkedlist.HasCycle(h.Head)
-
-	fmt.Println(d)
+	fmt.Println(obj.Search("apple"))
 
 }
